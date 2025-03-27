@@ -1,17 +1,18 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
-// Your web app's Firebase configuration
+// Aquí van tus credenciales de Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyC1lR8biULrNX_TNVkdRBf1N7ycXV8eVGw",
-  authDomain: "juego-af928.firebaseapp.com",
-  projectId: "juego-af928",
-  storageBucket: "juego-af928.firebasestorage.app",
-  messagingSenderId: "544525848841",
-  appId: "1:544525848841:web:f15ecaeedfeac7874503d8"
+    apiKey: "AIzaSyDB-MLE6kAf-lZ4dPzrb2r4pAYWmaMY_bU",
+    authDomain: "juego-a3f6a.firebaseapp.com",
+    projectId: "juego-a3f6a",
+    storageBucket: "juego-a3f6a.firebasestorage.app",
+    messagingSenderId: "391467828990",
+    appId: "1:391467828990:web:03307414dc923f499ac7af"
 };
 
-// Initialize Firebase
+// Inicializar Firebase
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+export { db, addDoc, collection };
